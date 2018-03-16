@@ -1,2 +1,0 @@
-# ALL
-All practice problems
