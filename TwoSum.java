@@ -5,6 +5,22 @@
 */
 import java.util.*;
 public class TwoSum {
+ 
+ // brute force solution : O(N ^ 2), Space : O(1)
+ private static boolean twoSum(int[] arr, int targetSum) {
+	  if(arr == null || arr.length == 0) 
+     return false;
+	  for(int i = 0; i < arr.length; i++) {
+		    for(int j = 0; j < arr.length; j++){
+			     if(i != j && arr[i] + arr[j] == targetSum){
+			       System.out.println("IndexPositions : " + i + " and " + j);
+			       return true;
+			     }
+		    }
+	  }
+	  return false;
+  }
+ 
  /*
  Solution 1: Loop through the array and store the values in Set.
  Check if (targetSum - value) exists in the Set and return true if exists or false.
